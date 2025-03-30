@@ -1,6 +1,6 @@
 #contact {
   background: #181d23 url(../../Images/envelope.svg) no-repeat right;
-  clip-path: polygon(0 0, 20% 100px, 100% 0, 100% 100%, 0 100%);
+  /* clip-path: polygon(0 0, 20% 100px, 100% 0, 100% 100%, 0 100%); */
   color: #fafafa;
   min-height: 100vh;
   width: 100%;
@@ -110,7 +110,7 @@ input[type="submit"]:focus {
 .mail .at, .mail .dot {
   font-size: .9rem;
   margin: 0 .1rem;
-  color: #f300b4;
+  color: #046565;
 }
 
 

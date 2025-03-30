@@ -3,9 +3,11 @@
 .menu-container.active > .overlay {
   position: absolute;
   right: 0;
-  height: calc( 100vh - 120px );
-  width: calc( 100vw - 120px );
-  background: #fafafa;
+  height: calc( 100vh);
+  width: calc( 100vw);
+  background-color: #fafafa;
+  display: block;
+  background: transparent;
 }
 
 .menu-container.active > .overlay {
@@ -48,6 +50,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  z-index: auto;
 }
 
 .menu-container::before,
@@ -55,8 +58,7 @@
   content: '';
   position: absolute;
   width: 100%;
-  min-height: 100vh;
-  z-index: -1;
+  max-height: 100vh;
 }
 
 .menu-container::before {
@@ -74,15 +76,15 @@
 @keyframes fade-out {
   0% {
     opacity: 1;
-    z-index: 999;
+    z-index: auto;
   }
   50% {
     opacity: 1;
-    z-index: 999;
+    z-index: auto;
   }
   100% {
     opacity: 0;
-    z-index: -1;
+    z-index: auto;
   }
 }
 
@@ -97,7 +99,7 @@
   }
   to {
     opacity: 1;
-    z-index: 999;
+    z-index: 5;
   }
 }
 

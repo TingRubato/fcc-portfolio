@@ -4,9 +4,9 @@
   font-size: 1.4rem;
   position: relative;
   background: #fafafa;
-  clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+  /* clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%); */
   z-index: 5;
-  background: #fafafa url(../../Images/Author_BG.jpg) center right no-repeat;
+  background: #fafafa url(../../Images/Author_BG.png) center right no-repeat;
   background-attachment: fixed;
 }
 
@@ -34,6 +34,7 @@
 
 #about .title h3 {
   font-size: 2.4rem;
+  margin-bottom: 2rem;
 }
 
 #about .separator {
@@ -49,12 +50,13 @@
   text-align: center;
   color: inherit;
   padding-bottom: 1.5rem;
-}
+} 
 
 #about p {
   padding-bottom: 1.5rem;
   color: #555;
   line-height: 1.9rem;
+  text-align: center;
 }
 
 #about .desc.full {
@@ -93,4 +95,56 @@
   #about .wrapper {
     padding: 10rem 2rem 8rem;
   }
+}
+
+#about .book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+#about .hyperlink {
+  --primary: rgb(214, 84, 240);
+  --secondary: rgb(151, 46, 172);
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  
+  text-decoration: underline;
+  color: var(--primary-inv);
+  transition: color .3s ease-in-out;
+  font-size: 6em;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  margin: .1em;
+  overflow: hidden;
+}
+
+#about .hyperlink *, 
+#about .hyperlink *::after {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+/* Hover Me #1 */
+#about .hvr::before {
+  position: absolute;
+  background: var(--primary-inv);
+  opacity: .7;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform .6s ease;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+#about .hvr:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }

@@ -1,24 +1,22 @@
-import React from 'react';
-import './Nav.css';
+import React from "react";
+import "./Nav.css";
+import BrandLogo from "../../Images/e-logo.png";
 
-const Nav = props => {
+const Nav = (props) => {
   return (
-    <React.Fragment>
-      <nav id="navbar">
-        <div className="nav-wrapper">
-          <p className="brand">
-            yago
-            <strong>estévez</strong>
-          </p>
-          <a
-            onClick={props.toggleMenu}
-            className={props.showMenu === 'active' ? 'menu-button active' : 'menu-button'}
-          >
-            <span />
-          </a>
-        </div>
-      </nav>
-    </React.Fragment>
+    <nav id="navbar">
+      <div className="nav-wrapper">
+        <img src={BrandLogo} alt="Brand Logo" />
+        <p className="brand">
+        <strong>Stop Struggling</strong> with Your Teen</p>
+        <a 
+          onClick={props.toggleMenu}
+          className={props.showMenu === "active" ? "menu-button active" : "menu-button"}
+        >
+          <span />
+        </a>
+      </div>
+    </nav>
   );
 };
 

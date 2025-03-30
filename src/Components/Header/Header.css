@@ -36,7 +36,7 @@
   position: absolute;
   bottom: -300px;
   left: 0;
-  background: url(../../Images/Trees.svg) bottom left repeat-x;
+  background: url(../../Images/bg-f.png) bottom right repeat-x;
   /* background-position-x: 100px; */
   background-size: cover;
   width: 100%;
@@ -60,9 +60,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url(../../Images/Silhouette.svg) bottom left no-repeat;
-  width: 50%;
-  height: 50%;
+  background: url(../../Images/evonne-figure.png) bottom left no-repeat;
+  background-size: 28%;
+  width: 60%;
+  height: 60%;
   opacity: 0;
   animation: silhouette-move-in 1000ms 800ms forwards;
 }
@@ -73,17 +74,15 @@
   }
   to {
     opacity: 1;
-    background-position-x: 50%;
+    background-position-x: 20%;
   }
 }
 
 .moon {
-  position: absolute;
   top: 0;
-  right: 0;
-  position: fixed;
-  background: url(../../Images/Moon.svg) right 150% no-repeat;
-  background-size: 40% 40%;
+  position: absolute;
+  background: url(../../Images/book-cover.png) center 100% no-repeat;
+  background-size: 20% auto;
   background-attachment: fixed;
   width: 100%;
   height: 100%;
@@ -95,13 +94,40 @@
 @keyframes moon-move-in {
   from {
     opacity: 0;
-    background-position: right 150%;
+    background-position: left 80%;
   }
   to {
     opacity: 1;
-    background-position: top right;
+    background-position: 90% center;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .moon {
+    background-position: center center;
+  }
+}
+
+@media only screen and (max-width: 649px) {
+  .moon {
+    background-size: 50% auto;
+    background-position: center center;
+  }
+  @keyframes moon-move-in {
+    from {
+      opacity: 0;
+      background-position: left 80%;
+    }
+    to {
+      opacity: 1;
+      background-position: 50% center;
+    }
+  }
+  
+}
+
+
+
 
 /* Copy and CTA */
 #welcome-section .container {
@@ -109,7 +135,7 @@
   position: absolute;
   right: 0;
   top: 50%;
-  right: 25%;
+  right: 0%;
   opacity: 0;
   transform: translate(0, -50%);
   animation: text-fade-in 1000ms 800ms forwards;
@@ -121,7 +147,7 @@
   }
   to {
     opacity: 1;
-    right: 25%;
+    right: 28.5%;
   }
 }
 
@@ -134,10 +160,45 @@
 }
 
 #welcome-section .container h1 .line:first-child {
-  margin-left: 1rem;
+  margin-left: 0rem;
 }
 
 #welcome-section .container h1 .line:last-child {
+  margin-left: 0rem;
+}
+
+#welcome-section .container h2 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: italic;
+  color: #fafafa;
+  line-height: 3rem;
+  text-decoration: underline;
+}
+
+#welcome-section .container h2 .line:first-child {
+  margin-left: 1rem;
+}
+
+#welcome-section .container h2 .line:last-child {
+  margin-left: 2rem;
+}
+
+#welcome-section .container h3 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: italic;
+  color: #fafafa;
+  line-height: 1.5rem;
+}
+
+#welcome-section .container h3 .line:first-child {
+  margin-left: 1rem;
+}
+
+#welcome-section .container h3 .line:last-child {
   margin-left: 2rem;
 }
 
@@ -159,14 +220,14 @@
 
 #welcome-section .container .buttons a:hover,
 #welcome-section .container .buttons a:active {
-  border: 1px solid #f300b4;
+  border: 1px solid #00b1b2;
   transform: translateY(-2px);
-  box-shadow: 0 10px 100px -20px #f300b4;
+  box-shadow: 0 10px 100px -20px #00b1b2;
 }
 
 #welcome-section .container .buttons a.cta,
 #welcome-section .container .buttons a.cta:visited {
-  background: #f300b4;
+  background: #00b1b2;
   border: 1px solid transparent;
   color: #fafafa;
   font-weight: bold;
@@ -175,7 +236,7 @@
 #welcome-section .container .buttons a.cta:hover,
 #welcome-section .container .buttons a.cta:active {
   background: transparent;
-  border: 1px solid #f300b4;
+  border: 1px solid #00b1b2;
 }
 
 #welcome-section .container .buttons a:first-child {
@@ -187,8 +248,36 @@
 }
 
 .color {
-  color: #f300b4;
+  color: #00b1b2;
   font-style: italic;
+}
+
+@media only screen and (max-width: 1024px) {
+  #welcome-section .container h1 {
+    font-size: 3rem;
+  }
+
+  #welcome-section .container h2 {
+    font-size: 1.5rem;
+  }
+
+  #welcome-section .container h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #welcome-section .container h1 {
+    font-size: 2.5rem;
+  }
+
+  #welcome-section .container h2 {
+    font-size: 1.25rem;
+  }
+
+  #welcome-section .container h3 {
+    font-size: 1.25rem;
+  }
 }
 
 @media only screen and (max-width: 649px) {
@@ -212,5 +301,17 @@
 
   .silhouette {
     width: 100%;
+  }
+
+  #welcome-section .container h1 {
+    font-size: 2rem;
+  }
+
+  #welcome-section .container h2 {
+    font-size: 1rem;
+  }
+
+  #welcome-section .container h3 {
+    font-size: 1rem;
   }
 }

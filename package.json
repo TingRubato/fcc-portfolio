@@ -1,18 +1,22 @@
 {
   "name": "portfolio",
   "author": {
-    "name" : "Yago Estévez",
-    "url" : "https://twitter.com/yagoestevez"
+    "name": "Yago Estévez",
+    "url": "https://twitter.com/yagoestevez"
   },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts": "2.0.5"
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "mixitup": "^3.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scripts": "2.0.5",
+    "reveal.js": "^5.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

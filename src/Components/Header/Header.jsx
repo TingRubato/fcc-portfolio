@@ -9,16 +9,23 @@ const Header = props => {
       <div className="moon" />
       <div className="container">
         <h1>
-          <span className="line">I do</span>
-          <span className="line">graphic design</span>
-          <span className="line">
-            <span className="color">&</span> code.
+          <span className="line"> Do you want to
+            <span className="color"> connect MORE</span>
           </span>
+          <span className="line"> and
+          <span className="color"> argue Less </span>
+           with your Teen?</span>
         </h1>
+        <h2>
+          STOP STRUGGLING WITH YOUR TEEN
+        </h2>
+        <h3>
+          A complete and easy-to-use guide from Evonne Weinhaus
+         </h3>
         <div className="buttons">
-          <a href="#projects">my portfolio</a>
+          <a href="#projects">About</a>
           <a href="#contact" className="cta">
-            get in touch
+            Student Portal
           </a>
         </div>
       </div>
