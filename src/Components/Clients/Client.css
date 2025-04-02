@@ -1,6 +1,8 @@
+/* 
+  Main Clients Section
+*/
 #clients {
-  background: rgb(var(--color-bg));
-  color: var(--color-text);
+  /* CSS Variables */
   --color-text: white;
   --color-bg: 17, 24, 39;
   --size: 18rem;
@@ -8,97 +10,56 @@
   --duration: 60s;
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
-}
 
-/* General styles for .logo-wall */
-#clients .logo-wall {
-  font-size: 1.4rem;
+  /* Basic styles */
+  color: var(--color-text);
   min-height: 100vh;
-  position: relative;
-  background: rgb(var(--color-bg));
-  color: var(--color-text);
-  padding: 4rem 0;
-  --color-text: white;
-  --color-bg: 17, 24, 39;
-  --size: 18rem;
-  --gap: 5rem;
-  --duration: 60s;
-  --scroll-start: 0;
-  --scroll-end: calc(-100% - var(--gap));
+
+  /* Correct shorthand for background with center/no-repeat */
+  background: url("../../Images/Author_BG.png") center no-repeat;
 }
 
-/* Grid layout for articles */
-#clients .logo-wall article {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  padding: 3rem 0;
+/* 
+  The first inner container: .clients 
+*/
+#clients .clients {
+  /* Additional styling if needed */
+  z-index: 1;
+
 }
 
-/* Title styles */
-#clients .logo-wall .title {
-  grid-column-end: span 4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#clients .logo-wall .title h3 {
+/* Title + separator above the list */
+#clients .clients .title {
   font-size: 2.4rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-/* Separator styles */
-#clients .logo-wall .separator {
-  background: #f300b4;
+#clients .clients seperator {
+  align-items: center;
+  height: 5px;
   width: 150px;
-  height: 2px;
-  margin: 1rem 0;
+  margin: 0 auto;
+  color: #d62896;
 }
 
-/* Subtitle styles */
-#clients .logo-wall .subtitle {
-  font-size: 1.6rem;
-  text-align: center;
-  color: inherit;
-}
-
-/* Paragraph styles */
-#clients .logo-wall p {
-  padding-bottom: 1.5rem;
-  color: #555;
-  line-height: 1.9rem;
-  text-align: center;
-}
-
-#clients .heading .list {
-  list-style-type: circle;
-  font-size: 1.1rem;
-  display: flex;
-  justify-content: center;
-  padding-left: 6rem;
-  margin: 1rem;
-}
-
-#clients .logo-wall .desc {
-  grid-column-end: span 2;
-  text-align: center;
-}
-
-#clients .logo-wall .desc.full {
-  grid-column-end: span 4;
-  margin-bottom: 2rem;
+/* 
+  The floatlist and list styling
+*/
+#clients .list {
+  /* You can float or position if needed; 
+     currently there's no float property, 
+     so "floatlist" might just be a container class. */
 }
 
 #clients .list {
   font-size: 1.4rem;
   line-height: 175%;
   text-align: left;
-  margin-top: 0px;
-  margin-bottom: 0px;
   column-count: 2;
   column-gap: 4rem;
   padding-left: 10vw;
+  margin: 2rem 2rem;
 }
 
 #clients .list li {
@@ -106,65 +67,22 @@
   break-inside: avoid;
 }
 
-@media only screen and (max-width: 1149px) {
-  #clients article {
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2rem;
-  }
-  #clients .desc.full {
-    grid-column-end: -1;
-  }
-
-  #clients .desc {
-    grid-column-end: -1;
-  }
-}
-
-@media only screen and (max-width: 949px) {
-  #clients {
-    background-position: top left;
-    background-size: cover;
-  }
-}
-
-@media only screen and (max-width: 649px) {
-  #clients .wrapper {
-    padding: 10rem 2rem 8rem;
-  }
-}
-
-.logo-wall .wrapper {
+/* 
+  Logo Wall + Marquee
+*/
+#clients .logo-wall {
+  font-size: 1.4rem;
+  min-height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
-  max-width: 100vw;
-  background-color: #253294;
-  /* margin-bottom: 5vh; */
+  background-color: #202934;
+  color: var(--color-text);
+  padding: 4rem 0;
+  z-index: 1;
 }
 
-.logo-wall .wrapper:after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-  background: linear-gradient(
-      90deg,
-      rgba(var(--color-bg) / 1) 0%,
-      rgba(var(--color-bg) / 0) 20%,
-      rgba(var(--color-bg) / 0) 80%,
-      rgba(var(--color-bg) / 1) 100%
-    ),
-    radial-gradient(
-      ellipse at top,
-      rgba(var(--color-bg) / 0) 0%,
-      rgba(var(--color-bg) / 1) 100%
-    );
-}
-
-/* Marquee styles */
+/* 
+  Marquee container 
+*/
 .logo-wall .marquee {
   display: flex;
   width: 100vw;
@@ -172,8 +90,12 @@
   overflow: hidden;
   user-select: none;
   gap: var(--gap);
+  /* Fancy glow/box-shadow */
   box-shadow: 0 0 50px rgba(31, 227, 224, 0.843),
-    0 0 20px rgba(31, 227, 224, 0.843), 0 0 30px rgba(31, 227, 224, 0.843);
+              0 0 20px rgba(31, 227, 224, 0.843),
+              0 0 30px rgba(31, 227, 224, 0.843);
+
+  /* Mask on the left/right so images fade out at edges */
   mask-image: linear-gradient(
     var(--mask-direction, to right),
     hsl(0 0% 0% / 0),
@@ -181,21 +103,15 @@
     hsl(0 0% 0% / 1) 80%,
     hsl(0 0% 0% / 0)
   );
+
   animation: glow 2s infinite;
-  /* margin-bottom: 5vh; */
 }
 
-.logo-wall .marquee img {
-  overflow: hidden;
-  object-fit: contain;
-  align-self: center;
-  margin: 1rem 2rem 1rem 1rem ; /* Center the image vertically */
-}
-
+/* Each marquee group is repeated horizontally */
 .logo-wall .marquee__group {
   flex-shrink: 0;
   display: flex;
-  margin: 2rem;
+  /* margin: 2rem; */
   align-items: center;
   justify-content: space-around;
   gap: var(--gap);
@@ -203,30 +119,37 @@
   animation: scroll-x var(--duration) linear infinite;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .logo-wall .marquee__group {
-    animation-play-state: paused;
-  }
-}
-
-.logo-wall .marquee--vertical {
-  --mask-direction: to bottom;
-}
-
-.logo-wall .marquee--vertical,
-.logo-wall .marquee--vertical .marquee__group {
-  flex-direction: column;
-}
-
-.logo-wall .marquee--vertical .marquee__group {
-  animation-name: scroll-y;
-}
-
 .logo-wall .marquee--reverse .marquee__group {
   animation-direction: reverse;
-  animation-delay: -3s;
+  /* optional “offset” to stagger the start */
+  animation-delay: -3s; 
 }
 
+/* The actual marquee items (the “cards” containing images) */
+.logo-wall .marquee .marquee__item {
+  display: flex;
+  width: 350px;
+  place-content: center;
+  aspect-ratio: 16 / 9;
+  padding: calc(var(--size) / 19);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 0.9);
+  box-shadow: 0 0 10px rgb(31 227 224 / 0.843);
+  animation: glow 3s infinite; /* The glow pulse */
+  overflow: hidden;
+}
+
+/* Images inside marquee items */
+.logo-wall .marquee img {
+  /* grid-area: auto; */
+  height: auto;
+  left: 1.25rem;
+  margin: 1rem; /* Tweak as desired */
+  size-adjust: auto;
+  max-width: 90%;
+}
+
+/* Animations */
 @keyframes scroll-x {
   from {
     transform: translateX(var(--scroll-start));
@@ -236,156 +159,48 @@
   }
 }
 
-@keyframes scroll-y {
-  from {
-    transform: translateY(var(--scroll-start));
-  }
-  to {
-    transform: translateY(var(--scroll-end));
-  }
-}
-
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 10px rgb(31 227 224 / 0.5), 0 0 20px rgb(31 227 224 / 0.5),
-      0 0 30px rgb(31 227 224 / 0.5);
+    box-shadow: 0 0 10px rgba(31, 227, 224, 0.5), 
+                0 0 20px rgba(31, 227, 224, 0.5),
+                0 0 30px rgba(31, 227, 224, 0.5);
   }
   25% {
     box-shadow: 0 0 20px rgba(31, 227, 224, 0.7),
-      0 0 30px rgba(31, 227, 224, 0.7), 0 0 40px rgba(31, 227, 224, 0.7);
+                0 0 30px rgba(31, 227, 224, 0.7),
+                0 0 40px rgba(31, 227, 224, 0.7);
   }
   50% {
-    box-shadow: 0 0 30px rgba(31, 227, 224, 1), 0 0 40px rgba(31, 227, 224, 1),
-      0 0 50px rgba(31, 227, 224, 1);
+    box-shadow: 0 0 30px rgba(31, 227, 224, 1),
+                0 0 40px rgba(31, 227, 224, 1),
+                0 0 50px rgba(31, 227, 224, 1);
   }
   75% {
     box-shadow: 0 0 20px rgba(31, 227, 224, 0.7),
-      0 0 30px rgba(31, 227, 224, 0.7), 0 0 40px rgba(31, 227, 224, 0.7);
+                0 0 30px rgba(31, 227, 224, 0.7),
+                0 0 40px rgba(31, 227, 224, 0.7);
   }
 }
 
-/* Element styles */
-.logo-wall .marquee .marquee__item {
-  display: flex;
-  width: 350px;
-  aspect-ratio: 16/9;
-  padding: calc(var(--size) / 19);
-  border-radius: 1rem;
-  background: rgb(255 255 255 / 0.9);
-  box-shadow: 0 0 10px rgb(31 227 224 / 0.843);
-  animation: glow 3s infinite;
-  overflow: hidden;
-  margin: 2;
-}
+/* 
+  Responsive Adjustments
+*/
 
-.logo-wall .marquee--vertical .marquee__item {
-  aspect-ratio: 1;
-  padding: calc(var(--size) / 3);
-}
-
-/* Parent wrapper */
-.logo-wall .wrapper--vertical {
-  flex-direction: row;
-  height: 100vh;
-}
-
-/* Toggle direction button */
-.logo-wall .toggle {
-  --size: 3rem;
-  position: relative;
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  width: var(--size);
-  height: var(--size);
-  font: inherit;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  border-radius: 50%;
-  color: inherit;
-  background-color: var(--color-bg-accent);
-  z-index: 1;
-}
-
-.logo-wall .toggle:focus-visible {
-  box-shadow: 0 0 0 2px var(--color-text);
-}
-
-.logo-wall .toggle span {
-  position: absolute;
-  display: inline-block;
-  top: 50%;
-  left: calc(100% + 0.4em);
-  width: fit-content;
-  white-space: nowrap;
-  transform: translateY(-50%);
-  animation: fade 400ms 4s ease-out forwards;
-  user-select: none;
-}
-
-.logo-wall .toggle .marquee__item {
-  --size: 1.5rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: var(--size);
-  height: var(--size);
-  fill: currentColor;
-  transform: translate(-50%, -50%);
-  transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.logo-wall .toggle--vertical .marquee__item {
-  transform: translate(-50%, -50%) rotate(-90deg);
-}
-
-@keyframes fade {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/* Responsive improvements */
-
+/* Example media queries from your existing file */
 @media only screen and (max-width: 1024px) {
-  #clients .logo-wall article {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   #clients .list {
     column-count: 1;
     padding-left: 4vw;
     font-size: 1.3rem;
   }
 
-  #clients .logo-wall .title h3 {
-    font-size: 2rem;
-  }
-
-  #clients .logo-wall .subtitle {
-    font-size: 1.4rem;
-  }
-
-  #clients .logo-wall p {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+  .logo-wall .marquee {
+    height: 25vh; /* optional tweak if 30vh is too tall on smaller screens */
   }
 }
 
 @media only screen and (max-width: 768px) {
-  #clients .logo-wall article {
-    grid-template-columns: 1fr;
-    padding: 2rem 1rem;
-  }
-
-  #clients .logo-wall .title {
-    padding: 1rem 0;
-  }
-
   .logo-wall .marquee {
     height: 20vh;
     gap: 2rem;
@@ -393,97 +208,29 @@
 
   .logo-wall .marquee .marquee__item {
     width: 260px;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     padding: 1rem;
-  }
-
-  .logo-wall .wrapper {
-    gap: 2rem;
-    padding: 2rem;
-  }
-
-  #clients .list {
-    padding-left: 2rem;
-  }
-
-  .logo-wall .toggle {
-    top: 0.5rem;
-    left: 0.5rem;
-    --size: 2.5rem;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  #clients .logo-wall .title h3 {
-    font-size: 1.6rem;
-  }
-
-  #clients .logo-wall .subtitle {
-    font-size: 1.2rem;
+  .logo-wall .marquee {
+    height: 18vh;
   }
 
   .logo-wall .marquee .marquee__item {
     width: 220px;
     padding: 0.75rem;
   }
-
-  #clients .logo-wall p {
-    font-size: 1rem;
-    line-height: 1.4rem;
-    padding: 0 1rem 1rem;
-  }
-
-  .logo-wall .marquee {
-    height: 18vh;
-  }
-
-  .logo-wall .wrapper {
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  #clients .list {
-    font-size: 1.2rem;
-    padding-left: 1rem;
-  }
-
-  .logo-wall .toggle span {
-    display: none;
-  }
 }
 
-/* Additional media queries for better responsiveness */
 @media only screen and (max-width: 320px) {
-  #clients .logo-wall .title h3 {
-    font-size: 1.4rem;
-  }
-
-  #clients .logo-wall .subtitle {
-    font-size: 1rem;
+  .logo-wall .marquee {
+    height: 16vh;
   }
 
   .logo-wall .marquee .marquee__item {
     width: 180px;
     padding: 0.5rem;
-  }
-
-  #clients .logo-wall p {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-    padding: 0 0.5rem 0.5rem;
-  }
-
-  .logo-wall .marquee {
-    height: 16vh;
-  }
-
-  .logo-wall .wrapper {
-    padding: 0.5rem;
-    gap: 0.5rem;
-  }
-
-  #clients .list {
-    font-size: 1rem;
-    padding-left: 0.5rem;
   }
 }

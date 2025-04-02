@@ -28,37 +28,37 @@ const logos = [
 const Client = () => {
   return (
     <section id="clients">
-      <div className="logo-wall">
-        <div className="clients">
-          <div className="title">
-            <h1>Evonne's Past Clients Include:</h1>
-            <div className="separator" />
-            <div className="floatlist">
-              <ul className="list">
-                <li>ABC Atlas Moving</li>
-                <li>American Express</li>
-                <li>Baptist Medical Center of Oklahoma</li>
-                <li>CNA</li>
-                <li>Comp USA</li>
-                <li>Construction Specifications Institute</li>
-                <li>Farmers of America</li>
-                <li>GenMark</li>
-                <li>Graebel Van Lines</li>
-                <li>Hewlett Packard</li>
-                <li>Institute of Management Accountants</li>
-                <li>Marriott Corporation</li>
-                <li>Merck &amp; Company</li>
-                <li>Methodist Rich Young Hospital</li>
-                <li>Midwest Employee Relocation Council</li>
-                <li>National Association of Service Managers</li>
-                <li>National Association of Women Business Owners</li>
-                <li>Professional Saleswoman</li>
-                <li>Prudential Relocation</li>
-                <li>Ralston Purina</li>
-                <li>MCI/World Com</li>
-              </ul>
+         <div className="logo-wall">
+          <div className="clients">
+            <div className="heading">
+              <div className="title">Evonne's Past Clients Include:</div>
+              <div className="seperator" />
+              <div className="floatlist">
+                <ul className="list">
+                  <li>ABC Atlas Moving</li>
+                  <li>American Express</li>
+                  <li>Baptist Medical Center of Oklahoma</li>
+                  <li>CNA</li>
+                  <li>Comp USA</li>
+                  <li>Construction Specifications Institute</li>
+                  <li>Farmers of America</li>
+                  <li>GenMark</li>
+                  <li>Graebel Van Lines</li>
+                  <li>Hewlett Packard</li>
+                  <li>Institute of Management Accountants</li>
+                  <li>Marriott Corporation</li>
+                  <li>Merck &amp; Company</li>
+                  <li>Methodist Rich Young Hospital</li>
+                  <li>Midwest Employee Relocation Council</li>
+                  <li>National Association of Service Managers</li>
+                  <li>National Association of Women Business Owners</li>
+                  <li>Professional Saleswoman</li>
+                  <li>Prudential Relocation</li>
+                  <li>Ralston Purina</li>
+                  <li>MCI/World Com</li>
+                </ul>
+              </div>
             </div>
-          </div>
         </div>
         <div className="marquee">
           <div className="marquee__group">

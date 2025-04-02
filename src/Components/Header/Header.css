@@ -1,49 +1,58 @@
+/* Base Variables */
+:root {
+  --silhouette-to-bg-position: 30%;
+  --text-to-right: 28.5%;
+  --moon-to-position: 80% center;
+  --moon-to-margin-top: 0;
+  --moon-to-transform: translate(5%, -10%);
+  --contrast: 120%;
+  background-color: black;
+}
+
 /* Header */
 #welcome-section {
-  background: #202736;
-  background: linear-gradient(to bottom, #181d23 0%, #202736 80%);
-  background-attachment: fixed;
-  background-size: cover;
+  background-image: linear-gradient(to bottom, #181d23 0%, #202736 80%);
+  background-attachment: scroll;
   position: relative;
-  min-height: 100vh;
-  margin: 0 auto;
-  z-index: 1;
+  z-index: 20;
+  animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
 }
 
 #welcome-section::before {
-  content: '';
-  position: fixed;
-  background: url(../../Images/Stars.svg);
-  background-attachment: fixed;
-  width: 100%;
-  min-height: 100vh;
-  z-index: -1;
-  opacity: 0;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  opacity: 1;
   animation: stars-move-in 1000ms 300ms forwards;
 }
 
 @keyframes stars-move-in {
   from {
-    background-position-y: -100px;
+    opacity: 0;
   }
   to {
     opacity: 1;
-    background-position-y: 0;
   }
 }
 
 .forest {
-  position: absolute;
-  bottom: -300px;
-  left: 0;
-  background: url(../../Images/bg-f.png) bottom right repeat-x;
-  /* background-position-x: 100px; */
-  background-size: cover;
+  position: relative;
+  bottom: -50vh;
+  background: url(../../Images/bg-f.png) bottom left repeat-x;
   width: 100%;
-  height: 80%;
-  opacity: 0;
+  height: 100%;
+  min-height: 100vh;
+  opacity: 1;
   animation: forest-move-in 1000ms 500ms forwards;
-  border-bottom: 300px solid #181d23;
 }
 
 @keyframes forest-move-in {
@@ -51,19 +60,19 @@
     background-position-y: 150%;
   }
   to {
+    background-position-y: 0%;
     opacity: 1;
-    background-position-y: 100%;
   }
 }
 
 .silhouette {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 0%;
   background: url(../../Images/evonne-figure.png) bottom left no-repeat;
-  background-size: 28%;
+  background-size: 30%;
   width: 60%;
   height: 60%;
+  z-index: 20;
   opacity: 0;
   animation: silhouette-move-in 1000ms 800ms forwards;
 }
@@ -74,19 +83,19 @@
   }
   to {
     opacity: 1;
-    background-position-x: 20%;
+    background-position-x: var(--silhouette-to-bg-position);
   }
 }
 
 .moon {
-  top: 0;
-  position: absolute;
-  background: url(../../Images/book-cover.png) center 100% no-repeat;
-  background-size: 20% auto;
-  background-attachment: fixed;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  /* bottom: 30%; */
+  left: 2vw;
+  position: absolute;
+  background: url(../../Images/book-cover.png) 25% 20% no-repeat;
+  background-size: 18% auto;
+  z-index: 20;
   opacity: 0;
   animation: moon-move-in 1.2s 1s forwards;
 }
@@ -94,51 +103,66 @@
 @keyframes moon-move-in {
   from {
     opacity: 0;
-    background-position: left 80%;
+    background-position: left 100%;
   }
   to {
     opacity: 1;
-    background-position: 90% center;
+    margin-top: var(--moon-to-margin-top);
+    transform: var(--moon-to-transform);
+    background-position: var(--moon-to-position);
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  .moon {
-    background-position: center center;
-  }
+#welcome-section .container-star {
+  min-height: 0vh;
+  align-items: center;
+  max-height: fit-content;
+  background-image: radial-gradient(
+    1600px at 70% 120%,
+    rgba(33, 39, 80, 1) 10%,
+    #020409 100%
+  );
+  z-index: 30;
 }
 
-@media only screen and (max-width: 649px) {
-  .moon {
-    background-size: 50% auto;
-    background-position: center center;
-  }
-  @keyframes moon-move-in {
-    from {
-      opacity: 0;
-      background-position: left 80%;
-    }
-    to {
-      opacity: 1;
-      background-position: 50% center;
-    }
-  }
-  
+#welcome-section .container-star content {
+  max-height: 100vh;
 }
 
+#welcome-section .container-star .content #universe,
+#welcome-section .container-star .content #canvas,
+#welcome-section .container-star .content #scene {
+  width: 100%;
+  padding-top: -15vh;
+  max-height: 80vh;
+  padding-top: -10vh;
+  display: flex;
+  justify-content: center;
+}
 
+#welcome-section .container-star .footerContent {
+  font-family: sans-serif;
+  color: rgba(200, 220, 255, 0.3);
+  /* position: fixed; */
+  text-align: center;
+  z-index: 30;
+}
 
-
+#welcome-section .container-star footer {
+  height: 300px;
+  align-items: center;
+  width: 100%;
+}
 /* Copy and CTA */
 #welcome-section .container {
-  width: fit-content;
   position: absolute;
-  right: 0;
-  top: 50%;
-  right: 0%;
+  top: 40%;
+  left: 25%;
   opacity: 0;
   transform: translate(0, -50%);
   animation: text-fade-in 1000ms 800ms forwards;
+  align-items: flex-end;
+  z-index: 1000; /* Increased z-index to ensure buttons are clickable */
 }
 
 @keyframes text-fade-in {
@@ -147,68 +171,37 @@
   }
   to {
     opacity: 1;
-    right: 28.5%;
+    right: var(--text-to-right);
   }
 }
 
-#welcome-section .container h1 {
-  font-size: 4rem;
+#welcome-section .container-star .container h1 {
+  font-size: 2.8rem;
   font-weight: normal;
-  font-style: italic;
+  /* font-style: italic; */
   color: #fafafa;
-  line-height: 3rem;
 }
 
-#welcome-section .container h1 .line:first-child {
-  margin-left: 0rem;
-}
-
-#welcome-section .container h1 .line:last-child {
-  margin-left: 0rem;
-}
-
-#welcome-section .container h2 {
+#welcome-section .container-star .container h2,
+#welcome-section .container-star .container h3 {
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: normal;
   font-style: italic;
   color: #fafafa;
-  line-height: 3rem;
-  text-decoration: underline;
 }
 
-#welcome-section .container h2 .line:first-child {
-  margin-left: 1rem;
-}
-
-#welcome-section .container h2 .line:last-child {
-  margin-left: 2rem;
-}
-
-#welcome-section .container h3 {
-  margin-top: 1rem;
-  font-size: 2rem;
-  font-weight: normal;
-  font-style: italic;
-  color: #fafafa;
-  line-height: 1.5rem;
-}
-
-#welcome-section .container h3 .line:first-child {
-  margin-left: 1rem;
-}
-
-#welcome-section .container h3 .line:last-child {
-  margin-left: 2rem;
-}
-
-#welcome-section .container .buttons {
+#welcome-section .container-star .container .buttons {
   display: flex;
-  margin-top: 1rem;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 1rem;
+  z-index: 1001; /* Increased z-index */
 }
 
-#welcome-section .container .buttons a,
-#welcome-section .container .buttons a:visited {
+#welcome-section .container-star .container .buttons a {
   width: 100%;
   padding: 1rem;
   border: 1px solid #fafafa;
@@ -216,102 +209,106 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 1rem;
+  transition: all 0.4s ease;
+  z-index: 1002; /* Increased z-index */
+  position: relative; /* Added position relative */
+  cursor: pointer; /* Added cursor pointer */
 }
 
-#welcome-section .container .buttons a:hover,
-#welcome-section .container .buttons a:active {
+#welcome-section .container-star .container .buttons a:hover {
   border: 1px solid #00b1b2;
   transform: translateY(-2px);
   box-shadow: 0 10px 100px -20px #00b1b2;
 }
 
-#welcome-section .container .buttons a.cta,
-#welcome-section .container .buttons a.cta:visited {
+#welcome-section .container-star .container .buttons a.cta {
   background: #00b1b2;
   border: 1px solid transparent;
-  color: #fafafa;
   font-weight: bold;
 }
 
-#welcome-section .container .buttons a.cta:hover,
-#welcome-section .container .buttons a.cta:active {
+#welcome-section .container-star .container .buttons a.cta:hover {
   background: transparent;
   border: 1px solid #00b1b2;
 }
 
-#welcome-section .container .buttons a:first-child {
-  margin-right: 1rem;
-}
-
-.line {
-  display: block;
-}
-
-.color {
-  color: #00b1b2;
-  font-style: italic;
-}
-
-@media only screen and (max-width: 1024px) {
-  #welcome-section .container h1 {
-    font-size: 3rem;
-  }
-
-  #welcome-section .container h2 {
-    font-size: 1.5rem;
-  }
-
-  #welcome-section .container h3 {
-    font-size: 1.5rem;
-  }
-}
-
+/* Responsive Breakpoints */
 @media only screen and (max-width: 768px) {
-  #welcome-section .container h1 {
+  #welcome-section .container-star .container h1 {
     font-size: 2.5rem;
   }
-
-  #welcome-section .container h2 {
-    font-size: 1.25rem;
+  #welcome-section .container-star .container h2 {
+    font-size: 1rem;
   }
-
-  #welcome-section .container h3 {
-    font-size: 1.25rem;
+  #welcome-section .container-star .container h3 {
+    font-size: 1rem;
+  }
+  #welcome-section .container-star .container .buttons {
+    align-items: center;
+    width: 100%;
+  }
+  #welcome-section .container-star .container .buttons a {
+  padding: auto;
+  /* width: 70%; */
+  border: 1px solid #fafafa;
+  color: #fafafa;
+  text-align: center;
+  font-size: 1 rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  z-index: 1002; /* Increased z-index */
+  position: relative; /* Added position relative */
+    }
+      .silhouette {
+    background-size: 50%;
+  }
+  .moon {
+    background-size: 30%;
+    position: absolute;
+    transform: translate(-35%, -35%);
   }
 }
 
-@media only screen and (max-width: 649px) {
-  #welcome-section .container {
-    right: 50%;
-    top: 10%;
-    width: 80%;
-    transform: translate(50%, 0);
-    animation: text-fade-in 1000ms 800ms forwards;
+@media only screen and (max-width: 480px) {
+  #welcome-section .container-star .container h1 {
+    font-size: 1.2rem;
   }
-
-  @keyframes text-fade-in {
-    from {
-      right: 0;
-    }
-    to {
-      opacity: 1;
-      right: 50%;
-    }
-  }
-
-  .silhouette {
+  #welcome-section .container .buttons {
     width: 100%;
   }
-
-  #welcome-section .container h1 {
-    font-size: 2rem;
+  .silhouette {
+    background-size: 50%;
   }
-
-  #welcome-section .container h2 {
-    font-size: 1rem;
+  .moon {
+    background-size: 30%;
+    margin-top: var(--moon-to-margin-top);
+    transform: translate(-35%, -35%);
   }
+}
 
+@media only screen and (max-width: 360px) {
+  #welcome-section .container-star {
+    top: 50%;
+    width: 90%;
+    transform: translate(50%, -10%);
+  }
+  #welcome-section .container-star h1 {
+    font-size: 1.25rem;
+  }
+  #welcome-section .container-star h2,
   #welcome-section .container h3 {
     font-size: 1rem;
+  }
+  #welcome-section .container-star .container .buttons {
+    /* flex-direction: column; */
+    /* align-items: flex-end; */
+    width: 80%;
+  }
+  .silhouette {
+    background-size: 60%;
+  }
+  .moon {
+    background-size: 50%;
   }
 }

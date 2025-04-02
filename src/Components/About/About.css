@@ -1,40 +1,38 @@
 #about {
-  height: 100%;
-  min-height: 100vh;
   font-size: 1.4rem;
   position: relative;
   background: #fafafa;
   /* clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%); */
   z-index: 5;
   background: #fafafa url(../../Images/Author_BG.png) center right no-repeat;
-  background-attachment: fixed;
 }
 
 #about .wrapper {
   padding: 15rem 10rem 12rem;
-  height: 100%;
-  min-height: 100vh;
-  max-width: 1400px;
-  margin: 0 auto;
+  /* height: 100%; */
+  /* min-height: 100vh; */
+  /* max-width: 1400px; */
+  margin: 0;
 }
 
 #about article {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* display: grid; */
+  grid-template-columns: repeat(2, 3fr);
   grid-gap: 1rem;
-  padding: 3rem 0;
+  /* padding: 2rem 0; */
 }
 
 #about .title {
-  grid-column-end: span 4;
   display: flex;
+  margin-top: 2rem;
+  grid-column-end: span 2;
   flex-direction: column;
   align-items: center;
 }
 
 #about .title h3 {
-  font-size: 2.4rem;
-  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 #about .separator {
@@ -48,59 +46,70 @@
 #about .subtitle {
   font-size: 1.6rem;
   text-align: center;
-  color: inherit;
-  padding-bottom: 1.5rem;
+  /* padding-bottom: 1.5rem; */
 } 
 
 #about p {
   padding-bottom: 1.5rem;
   color: #555;
   line-height: 1.9rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
-#about .desc.full {
-  grid-column-end: span 4;
-  margin-bottom: 2rem;
+#about .desc .full {
+  grid-column-end: span 6;
+  margin-bottom: 1rem;
 }
 
 #about .desc {
-  grid-column-end: span 2;
+  align-items: center;
   background: #ffffffaa;
-  padding: 2rem;
-  text-align: justify;
+  padding: 1rem;
+  text-align: left;
 }
+
+#about .desc .book-cover {
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  width: calc(30% - 2rem);
+  border-radius: 5px;
+}
+
 
 @media only screen and (max-width: 1149px) {
   #about article {
-    grid-template-columns: 1fr;
-    grid-gap: 0;
+    grid-template-columns: 1fr 3fr;
   }
-  #about .desc.full {
-    grid-column-end: -1;
+  #about .desc .full {
+    grid-column-end: 6;
   }
 
   #about .desc {
-    grid-column-end: -1;
+    grid-column-end: 3;
   }
 }
 @media only screen and (max-width: 949px) {
   #about {
-    clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);
+    /* clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%); */
     background-position: top left;
-    background-size: cover;
+    background-size: 50%;
+    }
   }
-}
 @media only screen and (max-width: 649px) {
   #about .wrapper {
-    padding: 10rem 2rem 8rem;
+    padding: 5rem 2rem 8rem;
   }
 }
 
-#about .book-cover {
-  width: 100%;
+#about video {
+  display: flex;
+  position: relative;
+  max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 #about .hyperlink {
@@ -147,4 +156,86 @@
 #about .hvr:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+#about .sd-container {
+  &-container {
+    position: fixed;
+    width: 100%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Changed from translateY to translateX */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+  }
+}
+
+#about .sd-container .arrow {
+  position: relative;
+  width: 42px;
+  height: 16px;
+  opacity: 0;
+  margin: 0 auto; /* Center the arrow within its container */
+  
+  &::before,
+  &::after {
+    content: "";
+    width: 21px;
+    height: 2px;
+    background-color: #00ccd3;
+    border-radius: 2px;
+    display: inline-block;
+  }
+  
+  &::before {
+    transform: rotate(45deg) translateX(25%)
+  }
+  
+  &::after {
+    transform: rotate(-45deg) translateX(-25%)
+  }
+  
+  &:nth-child(1) {
+    top: -50px;
+    opacity: 1;
+    animation: arrow2 1s ease 0s infinite;
+  }
+  
+  &:nth-child(2) {
+    top: -25px;
+    animation: arrow1 1s ease 0.25s infinite;
+  }
+}
+
+@keyframes arrow1 {
+  from {
+    opacity: 0;
+    top: -25px;
+  }
+  
+  to {
+    opacity: 0;
+    top: 0px;
+  }
+  
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow2 {
+  from {
+    opacity: 0;
+    top: -35px;
+  }
+  
+  to {
+    opacity: 0;
+    top: -10px;
+  }
+  
+  50% {
+    opacity: 1;
+  }
 }

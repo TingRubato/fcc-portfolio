@@ -9,16 +9,16 @@ const Author = () => {
         <div className="author-content">
           <article>
             <div className="heading-wrapper">
-              <h2 className="title">About Evonne Weinhaus</h2>
-              <div className="separator" />
               <div className="desc">
                 <img
                   className="image-fluid"
                   src={AuthorImage}
                   alt="Evonne Weinhaus"
                 />
-              </div>
-              <div className="desc">
+                </div>
+                <div className="heading">
+                <h2 className="title">About Evonne Weinhaus</h2>
+                <div className="separator" />
                 <p className="subtitle">
                   Evonne is a professional speaker, a family consultant, and an
                   award-winning parenting author. She has had numerous guest

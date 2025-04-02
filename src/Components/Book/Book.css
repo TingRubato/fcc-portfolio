@@ -26,11 +26,12 @@
   }
   
   /* Heading */
-  #book .heading .title {
-    text-align: center;
+  #book .book-container .heading  h3{
     font-size: 2.4rem;
-    line-height: 2.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
   }
+  
   
   #book .heading .separator {
     background: #f300b4;
@@ -40,20 +41,17 @@
   }
   
   #book .heading .subtitle {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-align: center;
-    width: 70%;
-    margin: 0 auto;
-    text-align: justify;
-  }
+    color: inherit;
+    padding-bottom: 1.5rem;
+  } 
 
-  #book .heading .list {
+  #book .heading  ul {
     list-style-type: circle;
-    font-size: 1.1rem;
-    display: flex;
     justify-content: center;
-    padding-left: 6rem;
-    margin: 1rem;
+    display: inline-block;
+    margin: 2rem 2rem 1rem 1rem;
   }
   
   

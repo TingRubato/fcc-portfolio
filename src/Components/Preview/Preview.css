@@ -4,18 +4,25 @@
 	font-size: 1.4rem;
 	padding-top: 10vh;
 	position: relative;
-	background: #fafafa;
+	background: #fafafa url("../../Images/Stars.svg") center no-repeat;
 	/* clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%); */
 	z-index: auto;
-	/* background: #fafafa url(../../Images/Author_BG.png) center right no-repeat; */
-	/* background-attachment: fixed; */
+	background-attachment: fixed;
 	/* clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%); */
 }
+@keyframes moveBackground {
+	0% {
+		background-position: center top;
+	}
+	100% {
+		background-position: center bottom;
+	}
+}
 
-/* ::before,
-::after {
-	content: "";
-} */
+#preview {
+	animation: moveBackground 10s linear infinite;
+}
+
 #preview .heading .title {
 	text-align: center;
 	font-size: 2.4rem;
@@ -110,8 +117,10 @@ Table of Contents
 
 .book {
 	position: relative;
-	width: 256px;
-	height: 352px;
+	/* width: 90%; */
+	max-width: 256px;
+	height: auto;
+	aspect-ratio: 256 / 352;
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
 	left: -70%;
@@ -121,6 +130,7 @@ Table of Contents
 	transform-style: preserve-3d;
 	background: #fafafa;
 	margin: 0 auto;
+	z-index: 3;
 }
 
 /*

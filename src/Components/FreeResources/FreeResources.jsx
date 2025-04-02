@@ -16,7 +16,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="Welcome to Evonne Weinhaus YouTube Channel."
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=7O3lAWTv5xo"
 			>
 			<small>
@@ -29,7 +29,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="Methods of Discipline"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=elGVb1tDWq0"
 			>
 			<small>
@@ -41,7 +41,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="What Use to Stop Me From Writing My Book -- Stop Struggling With Your Teen"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=QzKuGpBr1l8"
 			>
 			<small>
@@ -53,7 +53,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="Vaping: How To StartTalking About it"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=i0OdTrw91XE"
 			>
 			<small>
@@ -65,7 +65,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="Vaping: How to Talk About it, Pt. 2"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=-c40aiy_eFU"
 			>
 			<small>
@@ -77,7 +77,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="Vaping: What are the 8 L's?"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=ML_H8eYgP0M"
 			>
 			<small>
@@ -89,7 +89,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="7 Words to Change Your Relationship"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=gZGiIhpDrro"
 			>
 			<small>
@@ -101,7 +101,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="Warning!"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=hEGwZ1MsLPg"
 			>
 			<small>
@@ -113,7 +113,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="What to Do About Peer Pressure"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=Qb2GymRFrsw"
 			>
 			<small>
@@ -125,7 +125,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="Limiting Screen Time: Protecting or Punishing?"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=jCOcTIqU5Kk"
 			>
 			<small>
@@ -137,7 +137,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="Limiting Screen Time: Don't Use Your Mouth, Use Your Routine"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=ZlJTrUApeEc"
 			>
 			<small>
@@ -149,7 +149,7 @@ const FreeResources = props => {
 			<FreeResource
 			title="#2 Aha Moment"
 			img={youtubeImage}
-			tech="js css react node"
+			tech="youtube"
 			link="https://www.youtube.com/watch?v=E9O9ZBkSJ80"
 			>
 			<small>
@@ -163,7 +163,7 @@ const FreeResources = props => {
 			<FreeResource
   title="Week 1: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -174,7 +174,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 2: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -185,7 +185,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 3: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -196,7 +196,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 4: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -207,7 +207,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 5: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -218,7 +218,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 6: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -229,7 +229,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 7: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -240,7 +240,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 8: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -251,7 +251,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 9: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -262,7 +262,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 10: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -273,7 +273,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 11: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -284,7 +284,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 12: Quick Parenting Solutions - Applying Tuesday Tips"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -295,7 +295,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 13: Quick Parenting Solutions - Applying Tuesday Tips"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -306,7 +306,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 14–17: Thursday Talks with Evonne"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -317,7 +317,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 18: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -328,7 +328,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 19: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -339,7 +339,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 20–22: Quick Parenting Solutions – Vaping"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -350,7 +350,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 23: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -361,7 +361,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 24: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -372,7 +372,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 25: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -383,7 +383,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 26: Quick Parenting Solutions"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>
@@ -394,7 +394,7 @@ const FreeResources = props => {
 <FreeResource
   title="Week 27–28: Quick Parenting Solutions – Limiting Screen Time"
   img={youtubeImage}
-  tech="js css react node"
+  tech="youtube"
   link="#"
 >
   <small>

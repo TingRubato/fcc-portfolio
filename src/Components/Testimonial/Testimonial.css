@@ -23,7 +23,6 @@
     position: relative;
     display: inline;
     padding: 16px 32px;
-    /* font-size: 18px; */
     font-size: 18px;
     min-width: 20px;
     font-weight: 400;
@@ -51,7 +50,7 @@
     width: 100%;
 }
 
- .cards-container {
+.cards-container {
     position: relative;
     z-index: 1;
     width: 800px;
@@ -69,7 +68,6 @@
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: 3% calc(100% - 20px);
-    /* background-blend-mode: ; */
     border: 1px solid #006699;
     box-shadow: 9px 11px 3px 0px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
@@ -99,7 +97,8 @@
     opacity: 0;
     transition: color 0.5s, background-color 0.5s, transform 1s, opacity 0.2s 0.4s;
 }
- .card.hidden h1 {
+
+.card.hidden h1 {
     color: #fff;
     transition: color 0.5s;
 }
@@ -166,4 +165,63 @@
     text-align: center;
     line-height: 35px;
     margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .cards-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card h1 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    #testimonial .tabs-controls {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .card {
+        margin-top: 5vh;
+    }
+
+    .card h1 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #testimonial {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card h1 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
 }

@@ -17,6 +17,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const link = document.createElement('link');
+link.href = "https://vjs.zencdn.net/8.22.0/video-js.css";
+link.rel = "stylesheet";
+document.head.appendChild(link);
 const container = document.getElementById('app');
 const root = createRoot(container);
 root.render(<App />);

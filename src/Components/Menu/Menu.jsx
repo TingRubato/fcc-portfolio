@@ -1,7 +1,6 @@
 import React from 'react';
 import SocialLinks from '../SocialLinks';
 import './Menu.css';
-// import { Link } from "react-router-dom";
 
 const Menu = props => {
   return (
@@ -23,8 +22,6 @@ const Menu = props => {
             <a href="#projects" onClick={props.toggleMenu}>
               PORTFOLIO
             </a>
-          </li>
-          <li>
           </li>
           <li>
             <a href="#contact" onClick={props.toggleMenu}>

@@ -33,3 +33,9 @@ a:hover,
 a:active {
   color: #00b1b2;
 }
+
+footer {
+  background-color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}

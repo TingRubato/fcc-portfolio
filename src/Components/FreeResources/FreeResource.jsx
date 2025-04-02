@@ -1,14 +1,10 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const FreeResource = props => {
   const tech = {
-    sass: 'fab fa-sass',
-    css: 'fab fa-css3-alt',
-    js: 'fab fa-js-square',
-    react: 'fab fa-react',
-    vue: 'fab fa-vuejs',
-    d3: 'far fa-chart-bar',
-    node: 'fab fa-node'
+    facebook: 'fab fa-facebook-square',
+    youtube: 'fab fa-youtube'
   };
 
   const link = props.link || 'http://';
