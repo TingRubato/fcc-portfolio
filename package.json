@@ -1,11 +1,12 @@
 {
-  "name": "swiper-react-navigation",
+  "name": "evonne-weinhaus",
   "author": {
-    "name": "Yago Estévez",
-    "url": "https://twitter.com/yagoestevez"
+    "name": "Evonne Weinhaus",
+    "url": "https://twitter.com/evonneweinhaus"
   },
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tingrubato.github.io/evonne/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
@@ -27,6 +28,7 @@
     "@eslint/js": "^9.23.0",
     "eslint": "^5.6.0",
     "eslint-plugin-react": "^7.37.4",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "vite": "^4.0.4"
   },
