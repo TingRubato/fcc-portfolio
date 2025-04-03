@@ -6,7 +6,6 @@
   },
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tingrubato.github.io/evonne/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
@@ -33,9 +32,12 @@
     "vite": "^4.0.4"
   },
   "license": "MIT",
+  "homepage": "https://tingrubato.github.io/evonne",
   "scripts": {
+    "predeploy": "NODE_OPTIONS=--openssl-legacy-provider npm run build",
+    "deploy": "NODE_OPTIONS=--openssl-legacy-provider gh-pages -d build",
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "react-scripts build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

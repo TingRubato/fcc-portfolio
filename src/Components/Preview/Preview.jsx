@@ -4,13 +4,9 @@ import "./Preview.css";
 const Preview = (props) => {
   return (
 	<section id="preview">
-		<div className="heading">
-		<h3 className="title">Preview My Book</h3>
+					<div className="heading">
+									<h3 className="title">Get a Preview Copy</h3>
 			<p className="separator" />
-			<p className="subtitle">
-				Stop Struggling with Your Teen: <br />
-				How to Understand and Connect with Your Teen
-			</p>
 		</div>
     <div class="preview">
 				<ul class="align">
@@ -40,7 +36,8 @@ const Preview = (props) => {
 								<li></li>
 								<li></li>
 							</ul>
-							<figcaption>
+							<figcaption>		
+
 								<h1>Stop Struggling with Your Teen</h1>
 								<span>By Evonne Weinhaus</span>
 								<a href="#" className="p">Get it now on Amazon</a>

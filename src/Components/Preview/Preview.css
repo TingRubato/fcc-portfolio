@@ -690,10 +690,10 @@ Table of Contents
 /* figcaption */
 
 figcaption {
-	padding-left: 90px;
-	text-align: left;
+	padding-top: 30%;
 	position: relative;
-	top: 25%;
+	padding-left: 90px;
+	text-align: center;
 	font-size: large;
 	left: 256px;
 	width: 704px;
@@ -735,5 +735,77 @@ figcaption p {
 		padding-left: 0;
 		left: 80px;
 		font-size: 100%;
+	}
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+	#preview {
+		padding-top: 5vh;
+		font-size: 1.2rem;
+	}
+
+	#preview .heading .title {
+		font-size: 2rem;
+		line-height: 2rem;
+	}
+
+	#preview .heading .subtitle {
+		font-size: 1.3rem;
+		padding-bottom: 5vh;
+	}
+
+	.align > li {
+		width: 90%;
+		min-height: 250px;
+		margin: 20px auto;
+		padding: 0;
+	}
+
+	.book {
+		max-width: 200px;
+		left: 0;
+	}
+
+	figcaption {
+		width: 100%;
+		left: 0;
+		padding-left: 0;
+		font-size: 90%;
+	}
+}
+
+/* For mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+	#preview {
+		padding-top: 3vh;
+		font-size: 1rem;
+	}
+
+	#preview .heading .title {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+	}
+
+	#preview .heading .subtitle {
+		font-size: 1.2rem;
+		padding-bottom: 3vh;
+	}
+
+	.align > li {
+		width: 100%;
+		min-height: 200px;
+		margin: 15px auto;
+	}
+
+	.book {
+		max-width: 150px;
+	}
+
+	figcaption {
+		width: 100%;
+		font-size: 80%;
 	}
 }

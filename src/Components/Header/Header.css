@@ -2,9 +2,9 @@
 :root {
   --silhouette-to-bg-position: 30%;
   --text-to-right: 28.5%;
-  --moon-to-position: 80% center;
-  --moon-to-margin-top: 0;
-  --moon-to-transform: translate(5%, -10%);
+  --moon-to-position: 85% center;
+  --moon-to-margin-top: -10vh;
+  --moon-to-transform: translate(5%, -30%);
   --contrast: 120%;
   background-color: black;
 }
@@ -108,15 +108,15 @@
   to {
     opacity: 1;
     margin-top: var(--moon-to-margin-top);
-    transform: var(--moon-to-transform);
+    transform: translate(5%, -15%);
     background-position: var(--moon-to-position);
   }
 }
 
 #welcome-section .container-star {
-  min-height: 0vh;
+  /* min-height: 0vh; */
   align-items: center;
-  max-height: fit-content;
+  /* max-height: fit-content; */
   background-image: radial-gradient(
     1600px at 70% 120%,
     rgba(33, 39, 80, 1) 10%,
@@ -126,38 +126,55 @@
 }
 
 #welcome-section .container-star content {
-  max-height: 100vh;
+  /* max-height: 100vh; */
 }
 
-#welcome-section .container-star .content #universe,
-#welcome-section .container-star .content #canvas,
-#welcome-section .container-star .content #scene {
+
+#welcome-section .container-star .content #canvas {
   width: 100%;
-  padding-top: -15vh;
   max-height: 80vh;
-  padding-top: -10vh;
-  display: flex;
+  position: absolute;
   justify-content: center;
+  z-index: 1001;
+ 
+}
+
+#welcome-section .container-star .content #universe {
+  width: 100%;
+  max-height: 80vh;
+  position: relative;  
+  justify-content: center;
+  z-index: 1001;
+
+
+}
+#welcome-section .container-star .content #scene {
+  /* max-height: 80vh; */
+  /* display: flex; */
+  justify-content: center;
+  z-index: 1000;
+
 }
 
 #welcome-section .container-star .footerContent {
+  position: absolute;
   font-family: sans-serif;
   color: rgba(200, 220, 255, 0.3);
-  /* position: fixed; */
   text-align: center;
   z-index: 30;
 }
 
 #welcome-section .container-star footer {
-  height: 300px;
+  height: 100px;
   align-items: center;
   width: 100%;
 }
 /* Copy and CTA */
 #welcome-section .container {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 25%;
+  width: 50vw;
   opacity: 0;
   transform: translate(0, -50%);
   animation: text-fade-in 1000ms 800ms forwards;
@@ -235,55 +252,62 @@
 /* Responsive Breakpoints */
 @media only screen and (max-width: 768px) {
   #welcome-section .container-star .container h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduced font size for better readability */
+    font-weight: bold; /* Increased weight for emphasis */
   }
-  #welcome-section .container-star .container h2 {
-    font-size: 1rem;
-  }
+  #welcome-section .container-star .container h2,
   #welcome-section .container-star .container h3 {
-    font-size: 1rem;
+    font-size: 1.5rem; /* Adjusted font size */
+    font-weight: normal; /* Kept normal weight */
   }
   #welcome-section .container-star .container .buttons {
     align-items: center;
     width: 100%;
   }
   #welcome-section .container-star .container .buttons a {
-  padding: auto;
-  /* width: 70%; */
-  border: 1px solid #fafafa;
-  color: #fafafa;
-  text-align: center;
-  font-size: 1 rem;
-  font-weight: normal;
-  text-transform: uppercase;
-  transition: all 0.4s ease;
-  z-index: 1002; /* Increased z-index */
-  position: relative; /* Added position relative */
-    }
-      .silhouette {
+    padding: auto;
+    /* width: 70%; */
+    border: 1px solid #fafafa;
+    color: #fafafa;
+    text-align: center;
+    font-size: 1 rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    z-index: 1002; /* Increased z-index */
+    position: relative; /* Added position relative */
+  }
+    
+  .silhouette {
     background-size: 50%;
   }
   .moon {
-    background-size: 30%;
-    position: absolute;
-    transform: translate(-35%, -35%);
+    background-size: 40%;
+    /* position: absolute; */
+    transform: translate(15%, 15%);
   }
 }
 
 @media only screen and (max-width: 480px) {
   #welcome-section .container-star .container h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Further reduced font size */
+    font-weight: bold; /* Retained emphasis */
+  }
+  #welcome-section .container-star .container h2,
+  #welcome-section .container-star .container h3 {
+    font-size: 1.2rem; /* Adjusted font size */
+    font-weight: normal; /* Kept normal weight */
   }
   #welcome-section .container .buttons {
     width: 100%;
   }
   .silhouette {
-    background-size: 50%;
+    background-size: 100%;
+    padding-bottom: 20vh;
   }
   .moon {
-    background-size: 30%;
-    margin-top: var(--moon-to-margin-top);
-    transform: translate(-35%, -35%);
+    background-size: 50%;
+    transform: translate(15%, 15%);
   }
 }
 
@@ -294,11 +318,13 @@
     transform: translate(50%, -10%);
   }
   #welcome-section .container-star h1 {
-    font-size: 1.25rem;
+    font-size: 1.2rem; /* Reduced font size for very small screens */
+    font-weight: bold; /* Retained emphasis */
   }
   #welcome-section .container-star h2,
   #welcome-section .container h3 {
-    font-size: 1rem;
+    font-size: 1rem; /* Adjusted font size */
+    font-weight: normal; /* Kept normal weight */
   }
   #welcome-section .container-star .container .buttons {
     /* flex-direction: column; */
@@ -306,9 +332,9 @@
     width: 80%;
   }
   .silhouette {
-    background-size: 60%;
+    background-size: 80%;
   }
   .moon {
-    background-size: 50%;
+    background-size: 40%;
   }
 }

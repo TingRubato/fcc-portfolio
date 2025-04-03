@@ -9,22 +9,27 @@ const Menu = props => {
       <div className="menu-items">
         <ul>
           <li>
-            <a href="#welcome-section" onClick={props.toggleMenu}>
+            <a href="/#welcome-section" onClick={props.toggleMenu}>
               HOME
             </a>
           </li>
           <li>
-            <a href="#about" onClick={props.toggleMenu}>
-              ABOUT
+            <a href="/#about" onClick={props.toggleMenu}>
+              About the Book
             </a>
           </li>
           <li>
-            <a href="#projects" onClick={props.toggleMenu}>
-              PORTFOLIO
+            <a href="/#author" onClick={props.toggleMenu}>
+              About Evonne Weinhaus
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={props.toggleMenu}>
+            <a href="/speakings" onClick={props.toggleMenu}>
+              SPEAKING
+            </a>
+          </li>
+          <li>
+            <a href="/#contact" onClick={props.toggleMenu}>
               CONTACT
             </a>
           </li>

@@ -23,7 +23,8 @@ link.rel = "stylesheet";
 document.head.appendChild(link);
 const container = document.getElementById('app');
 const root = createRoot(container);
-root.render(<App />);
+root.render(
+<App />);
 
 // // If you want your app to work offline and load faster, you can change
 // // unregister() to register() below. Note this comes with some pitfalls.
