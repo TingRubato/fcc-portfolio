@@ -13,15 +13,14 @@ const About = (props) => {
             <video
               id="my-video"
               class="video-js"
-              autoPlay
-              controls
-              preload="auto"
-              data-setup="{}"
+              controls="true"
+              muted="true"
+              preload="none"
+              data-setup='{  "playbackRates": [1, 1.5, 2] }'
               style={{
                 zIndex: 100,
                 position: "relative",
-                width: "60vw",
-                height: "auto",
+                height: "30vh",
                 margin: "0 auto",
                 marginTop: "20px",
               }}
@@ -42,15 +41,22 @@ const About = (props) => {
                 for change instead of fueling never-ending power struggles.
               </p>
             </div>
-            <h3 className="subtitle">Are you...</h3>
-            <p>
+            <div className="title">
+              <h3 className="subtitle">Are you...</h3>
+              <p className="separator" />
+              <p>
               Tired of repeating everything three times and not being heard?
-            </p>
-            <p>Drained from daily arguing?</p>
-            <p>Eventually, giving in to your teen?</p>
-            <p>Do you want to be closer, more connected, with your teen?</p>
+              </p>
+              <p>Drained from daily arguing?</p>
+              <p>Eventually, giving in to your teen?</p>
             </div>
-            <h3 className="subtitle">If so...</h3>
+            <div className="title">
+                <h3 className="title">Do you want to...</h3>
+                <p className="separator" />
+
+                <p>be closer, more connected, with your teen?</p>
+                <h3 className="subtitle">If so...</h3>
+                <p className="separator" />
             <p>
               You are not alone. I have been there. I have worked with many
               parents who feel the same way. I have also worked with many teens
@@ -58,22 +64,14 @@ const About = (props) => {
               connection and how it can change everything.
             </p>
             <h4 className="subtitle">You should get</h4>
-            {/* <img
-              className="book-cover"
-              src={BookImage}
-              alt="Stop Struggling with your teen book cover"
-            /> */}
+            </div>
+            </div>
         </article>
-        {/* <div className="hyperlink">
-            <a href="https://evonneweinhaus.com" target="_blank" rel="noopener noreferrer">
-                Learn more about Evonne Weinhaus
-            </a>
-        </div> */}
-      </div>
       <div class="sd-container">
               <div className="arrow"></div>
               <div className="arrow"></div>
-            </div>
+        </div>
+        </div>
 
     </section>
   );

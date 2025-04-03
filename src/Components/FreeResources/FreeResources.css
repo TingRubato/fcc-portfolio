@@ -175,14 +175,32 @@
   }
 }
 
-@media only screen and (max-width: 649px) {
+@media only screen and (max-width: 767px) {
+  #free-resources .free-resource-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  #free-resources .free-resource .free-resource-link {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   #free-resources {
-    background: #f0f0f0;
+    padding: 6rem 2rem 6rem;
   }
-  #free-resources .free-resources-container {
-    padding: 12rem 0 8rem;
+  
+  #free-resources .free-resource-columns {
+    grid-template-columns: 1fr;
   }
+  
+  #free-resources .heading .title {
+    font-size: 2rem;
+  }
+  
   #free-resources .free-resource {
-    padding: 2rem 0;
+    width: 100%;
   }
 }
