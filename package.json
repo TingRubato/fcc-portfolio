@@ -34,8 +34,8 @@
   "license": "MIT",
   "homepage": "https://tingrubato.github.io/evonne",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "gh-pages-clean &&npm run build",
+    "deploy": "gh-pages -d build --repo  https://github.com/TingRubato/evonne.git",
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "react-scripts test",
